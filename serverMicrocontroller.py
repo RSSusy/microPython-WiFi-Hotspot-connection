@@ -55,7 +55,7 @@ except:
 # can interact with the server, the client MAC address must be changed on the
 # conditional comparison
 if addrss == '00:00:00:00:00:00':
-    data = 'Message from the server'
+    data = 'Message from the Server'
     dataSend = data.encode('utf-8')
     conn.send(dataSend)
 else:
