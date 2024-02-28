@@ -8,13 +8,13 @@ clientTCP = socket.socket()
 # ----------------------------------------------------------------------------------
 socketInfo = socket.getaddrinfo('192.168.4.1', 80)[0][-1]
 clientTCP.connect(socketInfo)
-print('Conectado al Servidor: ', str(socketInfo))
+print('Connected to the Server: ', str(socketInfo))
 
 print("\n")
 recvData, address = clientTCP.recvfrom(1024)
 dataPrint = recvData.decode('utf-8')
 print(str(dataPrint))
 
-data = 'Respuesta del Cliente'
+data = 'Client's answer'
 dataSend = data.encode('utf-8')
 clientTCP.send(dataSend)
